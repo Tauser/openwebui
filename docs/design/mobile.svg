@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="title desc"><title id="title">Codex Web Local — referência móvel</title><desc id="desc">Proposta estática de aparência. Todos os modelos, resultados e estados são ilustrativos.</desc>
+<rect x="0" y="0" width="390" height="844" rx="0" fill="#141414"/>
+<rect x="0" y="0" width="390" height="30" rx="0" fill="#101010"/>
+<text x="16" y="20" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="9" font-weight="400">REFERÊNCIA VISUAL · DADOS ILUSTRATIVOS</text>
+<g transform="translate(18 48)"><path d="M2 4h12M2 8h12M2 12h12" fill="none" stroke="#B0B0B0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="48" y="58" fill="#F2F2F2" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="600">OpenwebUi</text>
+<rect x="257" y="39" width="116" height="26" rx="7" fill="#252525" stroke="#343434"/>
+<text x="267" y="57" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Host local</text>
+<path d="M0 78H390" stroke="#343434"/>
+<text x="20" y="112" fill="#F2F2F2" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="600">Recuperar tarefas</text>
+<circle cx="24" cy="137" r="3" fill="#8BDBAA"/>
+<text x="34" y="141" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Concluída · Modelo local</text>
+<text x="302" y="141" fill="#9DDDC5" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Ver diff ›</text>
+<rect x="18" y="169" width="354" height="93" rx="12" fill="#1C1C1C"/>
+<text x="34" y="192" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">VOCÊ</text>
+<text x="34" y="217" fill="#F2F2F2" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400">Corrija a retomada das tarefas</text>
+<text x="34" y="241" fill="#F2F2F2" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400">após reiniciar o servidor.</text>
+<circle cx="24" cy="297" r="3" fill="#9DDDC5"/>
+<text x="36" y="302" fill="#F2F2F2" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600">AGENTE</text>
+<text x="20" y="334" fill="#F2F2F2" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400">A recuperação foi ajustada para evitar</text>
+<text x="20" y="358" fill="#F2F2F2" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400">a repetição de comandos concluídos.</text>
+<rect x="18" y="384" width="354" height="62" rx="9" fill="#1C1C1C" stroke="#343434"/>
+<g transform="translate(32 399)"><path d="M2 8l4 4L14 3" fill="none" stroke="#8BDBAA" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="60" y="409" fill="#F2F2F2" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500">Leitura e alteração</text>
+<text x="60" y="429" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">2 arquivos · checkpoint criado</text>
+<text x="348" y="412" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">›</text>
+<rect x="18" y="460" width="354" height="62" rx="9" fill="#1C1C1C" stroke="#343434"/>
+<g transform="translate(32 475)"><path d="M2 8l4 4L14 3" fill="none" stroke="#8BDBAA" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="60" y="485" fill="#F2F2F2" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500">Verificação concluída</text>
+<text x="60" y="505" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Exemplo: 8 testes passaram</text>
+<text x="348" y="488" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">›</text>
+<rect x="18" y="542" width="354" height="42" rx="9" fill="#252525" stroke="#343434"/>
+<g transform="translate(32 555)"><path d="M3 1h7l3 3v11H3zM9 1v4h4" fill="none" stroke="#B0B0B0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="60" y="568" fill="#9DDDC5" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Abrir alterações e evidências</text>
+<text x="347" y="568" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400">›</text>
+<text x="20" y="620" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">O trabalho continua ao trocar de tela.</text>
+<rect x="14" y="649" width="362" height="118" rx="16" fill="#1C1C1C" stroke="#343434"/>
+<text x="30" y="678" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400">Continue o trabalho…</text>
+<g transform="translate(30 731)"><path d="M8 2v12M2 8h12" fill="none" stroke="#B0B0B0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="57" y="720" width="83" height="26" rx="7" fill="#252525" stroke="#343434"/>
+<text x="67" y="738" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Executar</text>
+<text x="153" y="738" fill="#9DDDC5" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Acesso total</text>
+<g transform="translate(279 730)"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0zM2 7v1a6 6 0 0 0 12 0V7M8 14v2" fill="none" stroke="#B0B0B0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="322" y="718" width="38" height="38" rx="10" fill="#F2F2F2"/>
+<g transform="translate(333 729)"><path d="M8 13V3M3 8l5-5l5 5" fill="none" stroke="#141414" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="20" y="789" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="400">Conexão local · 2 arquivos no contexto</text>
+<rect x="0" y="804" width="390" height="40" rx="0" fill="#101010"/>
+<path d="M0 804H390" stroke="#343434"/>
+<text x="26" y="829" fill="#9DDDC5" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600">Conversa</text>
+<text x="126" y="829" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Arquivos</text>
+<text x="223" y="829" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Tarefas</text>
+<text x="325" y="829" fill="#B0B0B0" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Mais</text>
+</svg>

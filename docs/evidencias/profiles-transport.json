@@ -1,0 +1,12 @@
+{
+  "kind": "servidor Ollama simulado em loopback",
+  "checks": [
+    "configuração global e projeto, payload projeto",
+    "perfil da conversa sobrepõe projeto",
+    "override manual prevalece e contexto 8192 é enviado acima do limite 4096 informado",
+    "perfil vinculado protegido e fork preserva perfil e overrides",
+    "cancelamento e nova geração usam configuração resolvida"
+  ],
+  "createdAt": "2026-10-28T06:29:16.601Z",
+  "success": true
+}

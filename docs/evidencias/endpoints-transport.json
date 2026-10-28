@@ -1,0 +1,14 @@
+{
+  "kind": "dois servidores Ollama simulados em loopback",
+  "realSecondHostTested": false,
+  "checks": [
+    "alpha: catálogo e recomendações",
+    "beta: catálogo e recomendações",
+    "alpha: chat e streaming",
+    "beta: chat e streaming",
+    "beta: cancelamento e nova geração no mesmo endpoint",
+    "fork herda endpoint beta e usa seu transporte"
+  ],
+  "createdAt": "2026-10-28T01:01:40.224Z",
+  "success": true
+}

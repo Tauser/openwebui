@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-27T14:01:30.825Z",
+  "model": "qwen3.5-9b-coder:latest",
+  "endpoint": "http://127.0.0.1:11434/api/chat",
+  "options": {
+    "num_predict": 32,
+    "num_ctx": 4096
+  },
+  "think": false,
+  "keep_alive": "1m",
+  "success": true,
+  "httpStatus": 200,
+  "response": "OK",
+  "done": true,
+  "doneReason": "stop",
+  "elapsedMs": 61799
+}

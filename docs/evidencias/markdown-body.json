@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-28T00:16:00.849Z",
+  "success": true,
+  "readOnly": true,
+  "fixturesOnlyInBrowser": true,
+  "checks": [
+    {
+      "width": 1440,
+      "plainAndFencedUserMarkdown": true,
+      "plainAndFencedModelMarkdown": true,
+      "normalCodePreserved": true,
+      "sourcePreserved": true,
+      "safeHtml": true,
+      "previewPaste": true,
+      "noDuplicateResponse": true,
+      "activityCollapseUnchanged": true,
+      "downloads": 0,
+      "browserErrors": []
+    },
+    {
+      "width": 390,
+      "plainAndFencedUserMarkdown": true,
+      "plainAndFencedModelMarkdown": true,
+      "normalCodePreserved": true,
+      "sourcePreserved": true,
+      "safeHtml": true,
+      "previewPaste": true,
+      "noDuplicateResponse": true,
+      "activityCollapseUnchanged": true,
+      "downloads": 0,
+      "browserErrors": []
+    }
+  ]
+}

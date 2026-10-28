@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-27T23:44:43.039Z",
+  "success": true,
+  "realOllama": true,
+  "visionModel": "qwen3.5-9b-coder:latest",
+  "isolatedDatabase": true,
+  "checks": [
+    "Menu de anexos, erros por arquivo e rascunhos separados por conversa",
+    "Texto real no Ollama, download e anexo enviado preservado após reload",
+    "Edição e repetição preservam o arquivo e não alteram a origem",
+    "Imagem real enviada ao Qwen com visão, reconhecida e persistida",
+    "Contexto insuficiente gera erro sem truncar arquivo nem perder o rascunho",
+    "Modelo sem visão bloqueado; troca de modelo, colagem e arraste funcionam",
+    "Limite de oito anexos e compositor móvel sem corte",
+    "Falha HTTP preserva texto e anexo mesmo sem crypto.randomUUID"
+  ],
+  "browserErrors": []
+}

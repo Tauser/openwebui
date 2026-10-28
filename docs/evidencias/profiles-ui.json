@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-28T06:34:27.541Z",
+  "isolated": true,
+  "provider": "simulado",
+  "checks": [
+    "CRUD perfis",
+    "perfil de projeto",
+    "perfil de conversa",
+    "overrides locais",
+    "modelo não altera global/perfil",
+    "persistência reload",
+    "falha PATCH preserva seleção",
+    "restaurar herança",
+    "geração simulada",
+    "remoção referenciada rejeitada",
+    "fork herda",
+    "nova conversa já vazia não trava",
+    "POST conserva perfil",
+    "modal móvel Escape e sem overflow"
+  ],
+  "pageErrors": [],
+  "personalDataUnchanged": true
+}

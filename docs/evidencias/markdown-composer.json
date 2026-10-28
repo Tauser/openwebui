@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-28T00:01:47.389Z",
+  "success": true,
+  "readOnly": true,
+  "fixturesOnlyInBrowser": true,
+  "baselineHeight": 40,
+  "expandedHeight": 320,
+  "checks": [
+    "Markdown GFM nas mensagens; edição preserva fonte e HTML não executa",
+    "Colagem text/markdown no range, cursor e prévia sem alterar fonte",
+    "Campo cresce, limita altura, rola, restaura rascunho e encolhe",
+    "Texto longo com oito anexos, prévia móvel, menu acessível e colagem mista"
+  ],
+  "browserErrors": []
+}

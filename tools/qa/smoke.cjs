@@ -1,0 +1,75 @@
+// QA local opcional. QA_PLAYWRIGHT_MODULE aponta para uma instalação de Playwright.
+const { chromium } = require(process.env.QA_PLAYWRIGHT_MODULE || 'playwright');
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const base = process.env.QA_BASE_URL || 'http://127.0.0.1:3341';
+const dir = path.resolve('artifacts/qa');
+fs.mkdirSync(dir, { recursive: true });
+
+(async () => {
+  const browser = await chromium.launch({ headless: true, channel: 'chrome' });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  const checks = [];
+  const conversationTitle = `QA I01 - Persistência ${Date.now()}`;
+  try {
+    const health = await fetch(`${base}/api/v1/health`).then(r => r.json());
+    assert.equal(health.status, 'ok');
+    assert.equal(health.ollama.connected, true);
+    checks.push('API e Ollama reais conectados');
+    await page.goto(base);
+    await page.getByRole('heading', { name: 'Como posso ajudar?' }).waitFor();
+    await page.getByRole('button', { name: 'Configurações', exact: true }).first().click();
+    await page.getByRole('tab', { name: 'Modelo', exact: true }).click();
+    await page.getByLabel('Modelo padrão', { exact: true }).selectOption('qwen3.5-9b-coder:latest');
+    await page.getByRole('tab', { name: 'Aparência', exact: true }).click();
+    await page.getByLabel('Tema', { exact: true }).selectOption('dark');
+    await page.getByRole('button', { name: 'Salvar configurações', exact: true }).click();
+    await page.getByText('Configurações salvas.', { exact: true }).waitFor();
+    await page.locator('#settings-panel').evaluate(el => { el.scrollTop = 0; });
+    await page.screenshot({ path: path.join(dir, 'i01-desktop-dark.png'), fullPage: true });
+    checks.push('Lista real de modelos e configurações persistidas');
+    await page.getByLabel('Tema', { exact: true }).selectOption('light');
+    await page.getByRole('button', { name: 'Salvar configurações', exact: true }).click();
+    await page.waitForFunction(() => document.documentElement.dataset.theme === 'light');
+    await page.screenshot({ path: path.join(dir, 'i01-desktop-light.png'), fullPage: true });
+    await page.getByRole('button', { name: 'Fechar configurações', exact: true }).click();
+    const seedResponse = await fetch(`${base}/api/v1/conversations`, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({title:conversationTitle+' inicial'})});
+    assert.equal(seedResponse.ok,true);
+    await page.reload();
+    await page.getByRole('button', { name: `Renomear ${conversationTitle} inicial`, exact: true }).waitFor();
+    page.once('dialog', dialog => dialog.accept(conversationTitle));
+    await page.getByRole('button', { name: `Renomear ${conversationTitle} inicial`, exact: true }).click();
+    await page.getByRole('button', { name: `Arquivar ${conversationTitle}`, exact: true }).waitFor();
+    await page.reload();
+    await page.getByRole('button', { name: `Arquivar ${conversationTitle}`, exact: true }).waitFor();
+    checks.push('Criar, renomear e recarregar conversa do SQLite');
+    await page.getByRole('button', { name: `Arquivar ${conversationTitle}`, exact: true }).click();
+    await page.getByRole('button', { name: 'Arquivo', exact: true }).click();
+    await page.getByRole('button', { name: `Restaurar ${conversationTitle}`, exact: true }).click();
+    await page.getByRole('button', { name: 'Ativas', exact: true }).click();
+    await page.getByRole('button', { name: conversationTitle, exact: true }).click();
+    checks.push('Arquivar e restaurar conversa');
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.getByRole('button', { name: 'Abrir navegação', exact: true }).click();
+    await page.getByRole('button', { name: 'Fechar navegação', exact: true }).last().waitFor();
+    await page.screenshot({ path: path.join(dir, 'i01-mobile-navigation.png'), fullPage: true });
+    await page.keyboard.press('Escape');
+    await page.waitForFunction(() => document.querySelector('#navigation').getBoundingClientRect().right <= 1);
+    const clipped = await page.evaluate(() => ['.main', '.workspace', '.chat', '.composer', '.send'].filter(selector => {
+      const box = document.querySelector(selector).getBoundingClientRect();
+      return box.left < -1 || box.right > innerWidth + 1;
+    }));
+    assert.deepEqual(clipped, []);
+    await page.screenshot({ path: path.join(dir, 'i01-mobile.png'), fullPage: true });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
+    assert.equal(overflow, false);
+    checks.push('Navegação móvel, Escape, tema claro e ausência de overflow horizontal');
+    assert.deepEqual(errors, []);
+    const report = { checkedAt: new Date().toISOString(), base, checks, browserErrors: errors, success: true };
+    fs.writeFileSync(path.join(dir, 'smoke.json'), JSON.stringify(report, null, 2));
+    console.log(JSON.stringify(report));
+  } finally { await browser.close(); }
+})().catch(error => { console.error(error); process.exitCode = 1; });

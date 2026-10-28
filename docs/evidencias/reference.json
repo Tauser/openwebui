@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-27T19:42:01.707Z",
+  "success": true,
+  "isolatedDatabase": true,
+  "geometry": {
+    ".rail": {
+      "x": 0,
+      "y": 0,
+      "width": 52,
+      "height": 1332,
+      "color": "rgb(32, 35, 34)"
+    },
+    ".sidebar": {
+      "x": 52,
+      "y": 0,
+      "width": 276,
+      "height": 1332,
+      "color": "rgb(27, 29, 28)"
+    },
+    ".topbar": {
+      "x": 328,
+      "y": 0,
+      "width": 1410,
+      "height": 46,
+      "color": "rgba(0, 0, 0, 0)"
+    },
+    ".read-width": {
+      "x": 515,
+      "y": 94,
+      "width": 736,
+      "height": 448.1875,
+      "color": "rgba(0, 0, 0, 0)"
+    },
+    ".composer": {
+      "x": 515,
+      "y": 1224,
+      "width": 736,
+      "height": 98,
+      "color": "rgb(52, 52, 52)"
+    },
+    ".results-panel": {
+      "x": 1438,
+      "y": 54,
+      "width": 300,
+      "height": 212,
+      "color": "rgb(41, 41, 41)"
+    }
+  },
+  "checks": [
+    "Dimensões e alinhamento da referência em 1738×1332",
+    "Popover com contagem/pasta/repositório reais, edição e fixação persistidas",
+    "Menus compactos movem, arquivam e restauram conversas sem alterar mensagens",
+    "Mostrar mais, atividades recolhíveis, cópia por fallback e download Markdown",
+    "Popover móvel dentro da tela, Escape, configuração e tema claro sem corte"
+  ],
+  "browserErrors": []
+}

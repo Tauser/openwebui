@@ -1,0 +1,23 @@
+{
+  "name": "codex-web-local",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "dev": "npm run build:packages && node tools/dev.mjs",
+    "build:packages": "npm run build --workspace @codex-local/contracts && npm run build --workspace @codex-local/providers && npm run build --workspace @codex-local/runtime",
+    "build": "npm run build:packages && npm run build --workspace @codex-local/server && npm run build --workspace @codex-local/web",
+    "typecheck": "npm run build:packages && npm run typecheck --workspaces --if-present",
+    "test": "npm run build:packages && npm run test --workspaces --if-present",
+    "start": "node --env-file-if-exists=.env apps/server/dist/index.js",
+    "roadmap:sync": "node tools/sync-backlog.mjs",
+    "diagnose": "node tools/diagnostics/diagnostico.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}

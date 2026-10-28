@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-10-27T14:02:57.986Z",
+  "node": "v22.22.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "ramBytes": 33409069056,
+  "gpu": "AMD Radeon(TM) Graphics\r\nNVIDIA GeForce RTX 4070",
+  "ollama": {
+    "url": "http://127.0.0.1:11434/",
+    "connected": true,
+    "models": [
+      "hf.co/prithivMLmods/Qwen-Image-2.1-PE-I2I-GGUF:Q4_K_M",
+      "COMPANION-BASE:latest",
+      "JANA:latest",
+      "qwen3.5-9b-coder:latest",
+      "qwen3.5-codex:9b",
+      "gemma4:12b"
+    ],
+    "error": null,
+    "version": "0.40.11"
+  },
+  "codexVersion": "codex-cli 0.164.0-alpha.11.1",
+  "compatibility": "Compatibilidade integral não comprovada: streaming e cancelamento com modelo real não foram executados."
+}

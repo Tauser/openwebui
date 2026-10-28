@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-28T01:03:33.967Z",
+  "isolated": true,
+  "realCatalog": true,
+  "inferenceSent": false,
+  "checks": [
+    "CRUD servidores",
+    "settings salva sem preencher cadastro",
+    "seleção inicial persistida no POST",
+    "reload conserva vínculo",
+    "falha PATCH conserva seleção",
+    "null retorna padrão global",
+    "exclusão referenciada rejeitada",
+    "offline limpa catálogo",
+    "rascunho preservado em falha",
+    "desktop e celular",
+    "erro de listagem explícito"
+  ],
+  "pageErrors": []
+}

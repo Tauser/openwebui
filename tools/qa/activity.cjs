@@ -1,0 +1,53 @@
+const { chromium } = require(process.env.QA_PLAYWRIGHT_MODULE || 'playwright');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const base = process.env.QA_BASE_URL || 'http://127.0.0.1:3344';
+const seed = JSON.parse(fs.readFileSync(path.join(process.env.QA_DATA_DIR || '.data/qa-reference', 'seed.json'), 'utf8'));
+const api = async (suffix, method = 'GET', body) => { const response = await fetch(base + '/api/v1' + suffix, { method, headers: { 'content-type': 'application/json' }, ...(body === undefined ? {} : { body: JSON.stringify(body) }) }); assert.ok(response.ok); return response.json(); };
+(async () => {
+  await api('/settings', 'PATCH', { theme: 'dark' });
+  const browser = await chromium.launch({ channel: 'chrome', headless: true });
+  const page = await browser.newPage({ viewport: { width: 955, height: 738 } });
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  try {
+    await page.goto(base);
+    await page.getByRole('button', { name: 'Abrir navegação', exact: true }).click();
+    await page.getByRole('button', { name: 'Nova conversa no projeto ' + seed.project.name, exact: true }).click();
+    await page.getByRole('textbox', { name: 'Mensagem', exact: true }).fill('Escreva 300 linhas numeradas, cada linha com uma frase curta diferente sobre programação. Não abrevie a lista. /no_think');
+    await page.getByRole('button', { name: 'Enviar mensagem', exact: true }).click();
+    const activity = page.locator('.msg-activity').last();
+    await activity.getByRole('button', { name: /^Processando há/ }).waitFor();
+    await page.waitForFunction(() => [...document.querySelectorAll('.msg-activity li')].some(el => el.textContent.includes('Gerando resposta')));
+    const first = await activity.locator('.msg-activity-heading').innerText();
+    await page.waitForFunction(previous => [...document.querySelectorAll('.msg-activity-heading')].at(-1)?.textContent?.trim() !== previous.trim(), first, { timeout: 5000 });
+    fs.mkdirSync('artifacts/qa', { recursive: true });
+    const advanced = await activity.locator('.msg-activity-heading').innerText();
+    assert.notEqual(advanced, first);
+    const cancelRequestedAt = Date.now();
+    await page.getByRole('button', { name: 'Parar geração', exact: true }).click();
+    const clickCompletedAt = Date.now();
+    await page.getByRole('button', { name: 'Enviar mensagem', exact: true }).waitFor();
+    const cancelCompletedAt = Date.now();
+    let conversations = (await api('/conversations')).conversations;
+    const created = conversations.find(c => ![seed.alpha.id].includes(c.id) && c.sectionId === seed.project.id && c.model === 'qwen3.5-9b-coder:latest');
+    assert.ok(created);
+    let detail = await api('/conversations/' + created.id);
+    let response = detail.messages.at(-1);
+    assert.equal(response.status, 'cancelled');
+    assert.deepEqual(response.activities.map(a => a.kind), ['model', 'hardware', 'generation']);
+    assert.ok(response.activities.every(a => a.status !== 'running' && a.completedAt));
+    await page.reload(); await page.getByText('Interrompida', { exact: true }).waitFor();
+    assert.equal(await page.getByRole('button', { name: /^Processando há/ }).count(), 0);
+    await page.getByRole('textbox', { name: 'Mensagem', exact: true }).fill('Responda apenas OK. /no_think');
+    await page.getByRole('button', { name: 'Enviar mensagem', exact: true }).click();
+    await page.waitForFunction(() => !document.querySelector('button[aria-label="Parar geração"]'), {}, { timeout: 120000 });
+    detail = await api('/conversations/' + created.id); response = detail.messages.at(-1);
+    assert.equal(response.status, 'complete'); assert.ok(response.activities.every(a => a.status === 'complete'));
+    assert.deepEqual(errors, []);
+    const report = { checkedAt: new Date().toISOString(), success: true, realOllama: true, model: response.model, isolatedDatabase: true, timer: { first, advanced }, cancellation: 'persisted', cancelClickMs: clickCompletedAt - cancelRequestedAt, cancelTotalMs: cancelCompletedAt - cancelRequestedAt, completed: true, activityKinds: response.activities.map(a => a.kind), browserErrors: errors };
+    fs.writeFileSync('artifacts/qa/activity.json', JSON.stringify(report, null, 2)); console.log(JSON.stringify(report));
+  } catch (error) { await page.screenshot({ path: 'artifacts/qa/activity-failure.png' }); throw error; }
+  finally { await browser.close(); }
+})().catch(error => { console.error(error); process.exitCode = 1; });

@@ -1,0 +1,90 @@
+{
+  "updatedAt": "2026-10-28",
+  "requirements": {
+    "CFG-02": {
+      "status": "aceito",
+      "evidence": "I02.6: cadastro de endpoints persistentes, escolha por conversa, catálogos por servidor e fork/cancelamento validados. Dois servidores simulados HTTP e catálogo local real; segundo host físico não disponível. docs/ACEITE.md"
+    },
+    "CFG-01": {
+      "status": "em andamento",
+      "evidence": "I01: diagnóstico e conexão manual; fluxo dedicado de primeiro uso pendente"
+    },
+    "CFG-03": {
+      "status": "em andamento",
+      "evidence": "I02 parcial: metadados, thinking, limites e tamanho consultados por modelo; visualização completa de capacidades pendente"
+    },
+    "CFG-04": {
+      "status": "aceito",
+      "evidence": "I02.7: CRUD de perfis por conversa/projeto, ajustes locais, herança e fork; build, 35 testes, transporte e UI simulados passaram. Instalação pessoal atualizada após término da geração, backup e hashes idênticos. docs/ACEITE.md"
+    },
+    "CFG-05": {
+      "status": "em andamento",
+      "evidence": "I02 parcial: presets, recomendações automáticas e contexto ajustado por RAM/VRAM/pesos/KV; demais parâmetros pendentes"
+    },
+    "CFG-06": {
+      "status": "em andamento",
+      "evidence": "I01: prompt editável; precedência multicamada pendente"
+    },
+    "CHAT-01": {
+      "status": "aceito",
+      "evidence": "docs/ACEITE.md: streaming real, resposta final e persistência em SQLite"
+    },
+    "CHAT-02": {
+      "status": "aceito",
+      "evidence": "I02.2: parar, editar e repetir em ramificações com inferência real, preservando origem; docs/ACEITE.md"
+    },
+    "CHAT-03": {
+      "status": "aceito",
+      "evidence": "I02.2: favoritos persistidos e ordenação recente/título; criação, rename/archive/restore já validados"
+    },
+    "CHAT-13": {
+      "status": "aceito",
+      "evidence": "I02.2: rascunhos separados, última conversa e posição de leitura recuperados no navegador após reload/troca"
+    },
+    "AGT-08": {
+      "status": "em andamento",
+      "evidence": "Provas isoladas reais: leitura/alteração/teste, cancelamento cliente e retomada de checkpoint. Workspace, chat e reconciliação de efeitos pendentes ainda por integrar; MOTOR.md"
+    },
+    "CHAT-08": {
+      "status": "em andamento",
+      "evidence": "Markdown/tabelas/código e cópia com fallback LAN validados. Texto colado e blocos md/markdown são exibidos no chat; download da resposta substituído por Ver no chat. Painel de artefatos completo pendente; docs/ACEITE.md"
+    },
+    "AGT-01": {
+      "status": "aceito",
+      "evidence": "docs/ACEITE.md: chat local sem ferramentas de comandos/escrita"
+    },
+    "OPS-01": {
+      "status": "em andamento",
+      "evidence": "I02.4: shell, mensagens, projetos e compositor conforme capturas fornecidas, medidas verificadas e temas; demais telas pendentes"
+    },
+    "OPS-02": {
+      "status": "em andamento",
+      "evidence": "I01: 1440x900 e 390x844; auditoria integral de teclado/toque pendente"
+    },
+    "OPS-04": {
+      "status": "em andamento",
+      "evidence": "Validação de Host local/origem; acesso LAN por pedido explícito; sessão autenticada pendente"
+    },
+    "OPS-05": {
+      "status": "em andamento",
+      "evidence": "Bind LAN e UI pelo IP verificados na própria máquina; Firewall pendente: elevação UAC cancelada. Script administrativo pronto; autenticação, pareamento e HTTPS pendentes; ADR-007"
+    },
+    "OPS-13": {
+      "status": "em andamento",
+      "evidence": "I01: diagnóstico de hardware/Ollama; painel operacional pendente"
+    },
+    "CHAT-04": {
+      "status": "em andamento",
+      "evidence": "I02.4: projetos com metadados opcionais pasta/repositório, fixação e menus persistidos. Acesso real a pastas/ferramentas pendente; docs/ACEITE.md"
+    },
+    "CHAT-06": {
+      "status": "aceito",
+      "evidence": "I02.5: texto/código UTF-8 e PNG/JPEG/WebP, colagem/arraste, erros por item e inferência real validados; rascunhos de arquivos só nesta aba; PDF/Office pendentes em F6; docs/ACEITE.md"
+    }
+  },
+  "increment": {
+    "id": "I02.7",
+    "status": "aceito",
+    "description": "Perfis por conversa/projeto, ajustes locais e resolução de herança validados e aplicados à instalação pessoal"
+  }
+}

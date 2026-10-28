@@ -1,0 +1,55 @@
+const {chromium}=require(process.env.QA_PLAYWRIGHT_MODULE || 'playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const base=process.env.QA_BASE_URL || 'http://127.0.0.1:3343';
+const {alpha,beta}=JSON.parse(fs.readFileSync('.data/qa-i022/seed.json','utf8'));
+const api=async url=>{const r=await fetch(base+'/api/v1'+url);assert.ok(r.ok);return r.json()};
+(async()=>{
+ const browser=await chromium.launch({channel:'chrome',headless:true});
+ const page=await browser.newPage({viewport:{width:1440,height:900}});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const checks=[];
+ const open=async title=>{await page.getByRole('button',{name:title,exact:true}).click();await page.getByRole('heading',{name:title,exact:true}).waitFor()};
+ try{
+  await page.goto(base);const composer=page.getByRole('textbox',{name:'Mensagem',exact:true});await composer.waitFor();
+  await composer.fill('Rascunho de nova conversa');await open(alpha.title);await composer.fill('Rascunho Alpha');
+  await open(beta.title);await composer.fill('Rascunho Beta');await open(alpha.title);
+  assert.equal(await composer.inputValue(),'Rascunho Alpha');
+  await page.reload();await page.getByRole('heading',{name:alpha.title,exact:true}).waitFor();assert.equal(await composer.inputValue(),'Rascunho Alpha');
+  await page.getByRole('button',{name:'Nova conversa',exact:true}).click();assert.equal(await composer.inputValue(),'Rascunho de nova conversa');
+  checks.push('Rascunhos separados e última conversa restaurados após reload');
+  const unpin=page.getByRole('button',{name:`Desafixar ${beta.title}`,exact:true});if(await unpin.count()){await unpin.click();await page.getByRole('button',{name:`Fixar ${beta.title}`,exact:true}).waitFor()}
+  await page.getByRole('button',{name:`Fixar ${beta.title}`,exact:true}).click();await page.getByRole('button',{name:`Desafixar ${beta.title}`,exact:true}).waitFor();
+  await page.getByLabel('Ordenar conversas',{exact:true}).selectOption('title');const titles=await page.locator('.conversation-select').evaluateAll(items=>items.map(item=>item.title));assert.ok(titles.indexOf(beta.title)<titles.indexOf(alpha.title));
+  await page.reload();await page.getByRole('button',{name:`Desafixar ${beta.title}`,exact:true}).waitFor();assert.equal(await page.getByLabel('Ordenar conversas',{exact:true}).inputValue(),'title');
+  checks.push('Favorito persistente e ordenação por título');
+  await open(beta.title);await page.locator('.transcript').evaluate(el=>{el.scrollTop=500;el.dispatchEvent(new Event('scroll',{bubbles:true}))});
+  await page.waitForFunction(id=>localStorage.getItem('position:'+id)==='500',beta.id);
+  await open(alpha.title);await open(beta.title);assert.ok(Math.abs(await page.locator('.transcript').evaluate(el=>el.scrollTop)-500)<5);
+  await page.reload();await page.getByRole('heading',{name:beta.title,exact:true}).waitFor();assert.ok(Math.abs(await page.locator('.transcript').evaluate(el=>el.scrollTop)-500)<5);
+  checks.push('Posição de leitura preservada ao trocar conversa e recarregar');
+  await open(alpha.title);const original=await api('/conversations/'+alpha.id);
+  await page.getByRole('button',{name:'Editar pedido',exact:true}).click();await page.getByRole('dialog',{name:'Editar pedido',exact:true}).waitFor();
+  await page.locator('#edit-message').fill('Responda apenas EDITADO. /no_think');await page.getByRole('button',{name:'Enviar em nova conversa',exact:true}).click();
+  await page.getByRole('heading',{name:alpha.title+' — ramificação',exact:true}).waitFor();
+  await page.waitForFunction(()=>document.querySelector('.composer-hint')?.textContent?.includes('Enter para enviar'),{},{timeout:120000});
+  assert.deepEqual((await api('/conversations/'+alpha.id)).messages,original.messages);
+  let forks=(await api('/conversations')).conversations.filter(c=>c.parentId===alpha.id);assert.equal(forks.length,1);
+  const edited=await api('/conversations/'+forks[0].id);assert.equal(edited.messages[0].content,'Responda apenas EDITADO. /no_think');assert.equal(edited.messages.at(-1).status,'complete');
+  await open(alpha.title);await page.getByRole('button',{name:'Repetir resposta',exact:true}).click();await page.getByRole('heading',{name:alpha.title+' — ramificação',exact:true}).waitFor();
+  await page.waitForFunction(()=>document.querySelector('.composer-hint')?.textContent?.includes('Enter para enviar'),{},{timeout:120000});
+  forks=(await api('/conversations')).conversations.filter(c=>c.parentId===alpha.id);assert.equal(forks.length,2);assert.deepEqual((await api('/conversations/'+alpha.id)).messages,original.messages);
+  checks.push('Edição e repetição reais em ramificações sem alterar a origem');
+  await page.route('**/api/v1/conversations/*/fork',route=>route.fulfill({status:500,contentType:'application/json',body:JSON.stringify({error:'Falha simulada de ramificação'})}));
+  await page.getByRole('button',{name:'Editar pedido',exact:true}).click();await page.locator('#edit-message').fill('Texto preservado na falha');
+  await page.getByRole('button',{name:'Enviar em nova conversa',exact:true}).click();await page.getByRole('dialog').getByRole('alert').waitFor();
+  assert.equal(await page.locator('#edit-message').inputValue(),'Texto preservado na falha');await page.getByRole('dialog').getByRole('button',{name:'Cancelar',exact:true}).click();
+  await page.unroute('**/api/v1/conversations/*/fork');checks.push('Falha de ramificação preserva o texto editado');
+  await page.setViewportSize({width:390,height:844});await page.waitForFunction(()=>document.querySelector('#navigation').getBoundingClientRect().right<=1);
+  await page.getByRole('button',{name:'Editar pedido',exact:true}).click();await page.getByRole('dialog',{name:'Editar pedido',exact:true}).waitFor();
+  const box=await page.getByRole('dialog',{name:'Editar pedido',exact:true}).boundingBox();assert.ok(box.x>=0&&box.x+box.width<=390);await page.keyboard.press('Escape');assert.equal(await page.getByRole('dialog').count(),0);
+  const clipped=await page.evaluate(()=>['.main','.chat','.composer','.send'].filter(selector=>{const box=document.querySelector(selector).getBoundingClientRect();return box.left < -1 || box.right > innerWidth+1}));assert.deepEqual(clipped,[]);
+  assert.deepEqual(errors,[]);fs.mkdirSync('artifacts/qa',{recursive:true});await page.screenshot({path:'artifacts/qa/i022-mobile.png',fullPage:true});
+  const report={checkedAt:new Date().toISOString(),success:true,checks,browserErrors:errors};fs.writeFileSync('artifacts/qa/i022.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+ }catch(error){fs.mkdirSync('artifacts/qa',{recursive:true});await page.screenshot({path:'artifacts/qa/i022-failure.png',fullPage:true});throw error;}finally{await browser.close()}
+})().catch(error=>{console.error(error);process.exitCode=1});

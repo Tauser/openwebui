@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc"><title id="title">Codex Web Local — referência desktop claro</title><desc id="desc">Proposta estática de aparência. Todos os modelos, resultados e estados são ilustrativos.</desc>
+<rect x="0" y="0" width="1600" height="1000" rx="0" fill="#EAECE9"/>
+<text x="32" y="34" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="600">CODEX WEB LOCAL</text>
+<text x="230" y="34" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">REFERÊNCIA VISUAL / TEMA CLARO / V2.0</text>
+<text x="1242" y="34" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">DADOS ILUSTRATIVOS · 27 OUT 2026</text>
+<rect x="32" y="64" width="1536" height="864" rx="14" fill="#FFFFFF" stroke="#DADAD5"/>
+<rect x="33" y="65" width="247" height="834" rx="12" fill="#F5F5F4"/>
+<rect x="33" y="88" width="247" height="811" rx="0" fill="#F5F5F4"/>
+<rect x="280" y="65" width="1287" height="51" rx="0" fill="#FFFFFF"/>
+<path d="M280 65v834" stroke="#DADAD5"/>
+<path d="M280 116H1567" stroke="#DADAD5"/>
+<path d="M904 116v784" stroke="#DADAD5"/>
+<circle cx="56" cy="91" r="3" fill="#19624B"/>
+<text x="69" y="96" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="600">Codex Web Local</text>
+<g transform="translate(248 82)"><path d="M2 4h12M2 8h12M2 12h12" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="48" y="128" width="216" height="36" rx="8" fill="#FFFFFF" stroke="#DADAD5"/>
+<g transform="translate(62 138)"><path d="M8 2v12M2 8h12" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="89" y="151" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500">Nova conversa</text>
+<g transform="translate(61 185)"><path d="M11 11l4 4M12 7a5 5 0 1 1-10 0a5 5 0 0 1 10 0" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="89" y="198" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="400">Pesquisar</text>
+<text x="214" y="198" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="400">Ctrl K</text>
+<text x="52" y="244" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">FIXADAS</text>
+<g transform="translate(59 263)"><path d="M2 2h12v9H7l-4 3v-3H2z" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="86" y="276" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Arquitetura do agente</text>
+<text x="52" y="321" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">PROJETOS</text>
+<g transform="translate(244 309)"><path d="M8 2v12M2 8h12" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(57 343)"><path d="M1 4h5l2 2h7v8H1z" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="84" y="356" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600">OpenwebUi</text>
+<circle cx="250" cy="351" r="3" fill="#206C3C"/>
+<rect x="48" y="372" width="216" height="34" rx="7" fill="#ECECE9"/>
+<text x="67" y="394" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="500">Recuperar tarefas</text>
+<circle cx="250" cy="389" r="2.5" fill="#206C3C"/>
+<text x="67" y="430" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Interface e temas</text>
+<text x="67" y="466" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Configurar Ollama</text>
+<g transform="translate(57 491)"><path d="M1 4h5l2 2h7v8H1z" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="84" y="504" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="400">Outro projeto</text>
+<text x="52" y="568" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">FERRAMENTAS</text>
+<g transform="translate(59 588)"><path d="M2 2h12v9H7l-4 3v-3H2z" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="87" y="601" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Tarefas e agentes</text>
+<g transform="translate(59 626)"><path d="M2 8l4 4L14 3" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="87" y="639" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Automações</text>
+<g transform="translate(59 664)"><path d="M3 1h7l3 3v11H3zM9 1v4h4" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="87" y="677" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Modelos locais</text>
+<g transform="translate(59 702)"><path d="M1 4h5l2 2h7v8H1z" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="87" y="715" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Artefatos</text>
+<path d="M48 813H264" stroke="#DADAD5"/>
+<circle cx="61" cy="839" r="3" fill="#206C3C"/>
+<text x="75" y="844" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Ollama local</text>
+<text x="75" y="863" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="400">Conexão de exemplo</text>
+<g transform="translate(59 878)"><path d="M2 8a6 6 0 1 0 12 0a6 6 0 0 0-12 0M5 8a3 3 0 1 0 6 0a3 3 0 0 0-6 0" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="87" y="891" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Configurações</text>
+<text x="304" y="97" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="400">OpenwebUi</text>
+<text x="403" y="97" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500">/  Recuperar tarefas</text>
+<rect x="1170" y="78" width="133" height="26" rx="7" fill="#FFFFFF" stroke="#DADAD5"/>
+<text x="1180" y="96" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Este computador</text>
+<rect x="1315" y="78" width="130" height="26" rx="7" fill="#FFFFFF" stroke="#DADAD5"/>
+<text x="1325" y="96" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">feature/restore</text>
+<g transform="translate(1509 83)"><path d="M11 11l4 4M12 7a5 5 0 1 1-10 0a5 5 0 0 1 10 0" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="310" y="156" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="600">Recuperar tarefas</text>
+<text x="310" y="179" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Local · PowerShell · Conversa do projeto</text>
+<rect x="310" y="206" width="564" height="80" rx="12" fill="#F7F7F6"/>
+<text x="330" y="232" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">VOCÊ</text>
+<text x="330" y="256" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400">Corrija a retomada das tarefas após reiniciar</text>
+<text x="330" y="276" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400">o servidor e verifique o resultado.</text>
+<circle cx="316" cy="324" r="3" fill="#19624B"/>
+<text x="329" y="329" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600">AGENTE</text>
+<text x="400" y="329" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Modelo local selecionado</text>
+<text x="310" y="365" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400">Vou verificar a persistência e o ciclo de execução.</text>
+<text x="310" y="389" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="400">A tarefa deve retomar sem repetir comandos concluídos.</text>
+<rect x="310" y="416" width="564" height="64" rx="9" fill="#F7F7F6" stroke="#DADAD5"/>
+<g transform="translate(326 429)"><path d="M2 8l4 4L14 3" fill="none" stroke="#206C3C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="352" y="442" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500">Leu 3 arquivos</text>
+<text x="352" y="462" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">RunStore · Coordinator · testes</text>
+<text x="849" y="446" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">›</text>
+<rect x="310" y="494" width="564" height="64" rx="9" fill="#F7F7F6" stroke="#DADAD5"/>
+<g transform="translate(326 507)"><path d="M2 8l4 4L14 3" fill="none" stroke="#206C3C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="352" y="520" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500">Aplicou alterações em 2 arquivos</text>
+<text x="352" y="540" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Checkpoint registrado · diff disponível</text>
+<text x="849" y="524" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">›</text>
+<rect x="310" y="572" width="564" height="64" rx="9" fill="#F7F7F6" stroke="#DADAD5"/>
+<g transform="translate(326 585)"><path d="M2 8l4 4L14 3" fill="none" stroke="#206C3C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="352" y="598" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="500">Executou a verificação</text>
+<text x="352" y="618" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Resultado ilustrativo: 8 testes passaram</text>
+<text x="849" y="602" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">›</text>
+<text x="310" y="686" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="400">A recuperação agora reconcilia as ações já executadas.</text>
+<text x="310" y="708" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="400">As alterações e a evidência estão no painel ao lado.</text>
+<rect x="308" y="738" width="568" height="128" rx="16" fill="#F7F7F6" stroke="#DADAD5"/>
+<text x="326" y="768" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400">Adicione uma verificação de recuperação.</text>
+<g transform="translate(326 826)"><path d="M8 2v12M2 8h12" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="355" y="818" width="94" height="26" rx="7" fill="#FFFFFF" stroke="#DADAD5"/>
+<text x="365" y="836" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Executar</text>
+<rect x="457" y="818" width="119" height="26" rx="7" fill="#FFFFFF" stroke="#DADAD5"/>
+<text x="467" y="836" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Modelo local</text>
+<text x="590" y="836" fill="#19624B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Acesso total</text>
+<g transform="translate(784 825)"><path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0zM2 7v1a6 6 0 0 0 12 0V7M8 14v2" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="826" y="816" width="34" height="34" rx="10" fill="#202020"/>
+<g transform="translate(835 825)"><path d="M8 13V3M3 8l5-5l5 5" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="325" y="888" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="400">Contexto selecionado  ·  2 arquivos  ·  Sem envio à nuvem</text>
+<text x="925" y="145" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600">Alterações</text>
+<text x="1024" y="145" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Arquivos</text>
+<text x="1104" y="145" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Preview</text>
+<text x="1182" y="145" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Artefatos</text>
+<path d="M923 160H1000" stroke="#19624B"/>
+<path d="M905 166H1567" stroke="#DADAD5"/>
+<text x="926" y="192" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">2 arquivos alterados</text>
+<text x="1080" y="192" fill="#206C3C" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">+24  −6</text>
+<rect x="1353" y="173" width="190" height="26" rx="7" fill="#FFFFFF" stroke="#DADAD5"/>
+<text x="1363" y="191" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Revisar alterações</text>
+<rect x="922" y="211" width="627" height="41" rx="7" fill="#F7F7F6" stroke="#DADAD5"/>
+<g transform="translate(936 223)"><path d="M3 1h7l3 3v11H3zM9 1v4h4" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="962" y="237" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="500">server / RunCoordinator.ts</text>
+<text x="1455" y="237" fill="#206C3C" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">+18  −4</text>
+<text x="932" y="280" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">ANTES / DEPOIS</text>
+<text x="1366" y="280" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Diff unificado</text>
+<text x="930" y="306" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  48</text>
+<text x="982" y="306" fill="#202020" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">  async function resume(runId: string) {</text>
+<rect x="921" y="313" width="628" height="23" rx="0" fill="#FCEBEC"/>
+<text x="930" y="329" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  49</text>
+<text x="982" y="329" fill="#202020" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">-   await executePending(runId);</text>
+<rect x="921" y="336" width="628" height="23" rx="0" fill="#E8F5EC"/>
+<text x="930" y="352" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  49</text>
+<text x="982" y="352" fill="#206C3C" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">+   const run = await store.load(runId);</text>
+<rect x="921" y="359" width="628" height="23" rx="0" fill="#E8F5EC"/>
+<text x="930" y="375" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  50</text>
+<text x="982" y="375" fill="#206C3C" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">+   await reconcileEffects(run);</text>
+<rect x="921" y="382" width="628" height="23" rx="0" fill="#E8F5EC"/>
+<text x="930" y="398" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  51</text>
+<text x="982" y="398" fill="#206C3C" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">+   return continueFromCheckpoint(run);</text>
+<text x="930" y="421" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  52</text>
+<text x="982" y="421" fill="#202020" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">  }</text>
+<text x="930" y="444" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  53</text>
+<text x="982" y="444" fill="#202020" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400"></text>
+<text x="930" y="467" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  54</text>
+<text x="982" y="467" fill="#202020" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">  async function reconcileEffects(run: Run) {</text>
+<rect x="921" y="474" width="628" height="23" rx="0" fill="#E8F5EC"/>
+<text x="930" y="490" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  55</text>
+<text x="982" y="490" fill="#206C3C" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">+   for (const call of run.toolCalls) {</text>
+<rect x="921" y="497" width="628" height="23" rx="0" fill="#E8F5EC"/>
+<text x="930" y="513" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  56</text>
+<text x="982" y="513" fill="#206C3C" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">+     if (call.state === &quot;completed&quot;) continue;</text>
+<rect x="921" y="520" width="628" height="23" rx="0" fill="#E8F5EC"/>
+<text x="930" y="536" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  57</text>
+<text x="982" y="536" fill="#206C3C" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">+     await reconcile(call);</text>
+<rect x="921" y="543" width="628" height="23" rx="0" fill="#E8F5EC"/>
+<text x="930" y="559" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  58</text>
+<text x="982" y="559" fill="#206C3C" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">+   }</text>
+<text x="930" y="582" fill="#61615B" font-family="Cascadia Code,Consolas,monospace" font-size="11" font-weight="400">  59</text>
+<text x="982" y="582" fill="#202020" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">  }</text>
+<rect x="922" y="622" width="627" height="35" rx="7" fill="#F7F7F6" stroke="#DADAD5"/>
+<g transform="translate(936 632)"><path d="M2 2h12v9H7l-4 3v-3H2z" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="963" y="645" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Comentar trecho selecionado</text>
+<text x="1437" y="645" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Restaurar</text>
+<path d="M905 677H1567" stroke="#DADAD5"/>
+<rect x="905" y="678" width="661" height="221" rx="0" fill="#F5F5F4"/>
+<g transform="translate(924 695)"><path d="M2 4l4 4l-4 4M8 12h6" fill="none" stroke="#61615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="949" y="707" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="500">Terminal</text>
+<text x="1036" y="707" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Verificações</text>
+<text x="1150" y="707" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Logs</text>
+<text x="1435" y="707" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">PowerShell</text>
+<text x="927" y="748" fill="#202020" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">PS D:\Projetos\OpenwebUi&gt; npm test</text>
+<text x="927" y="776" fill="#206C3C" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">PASS  tests/run-recovery.test.ts</text>
+<text x="927" y="800" fill="#206C3C" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">PASS  tests/checkpoint.test.ts</text>
+<text x="927" y="833" fill="#202020" font-family="Cascadia Code,Consolas,monospace" font-size="12" font-weight="400">Tests: 8 passed · Exit code: 0</text>
+<text x="927" y="865" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Saída de exemplo para referência de layout.</text>
+<rect x="33" y="900" width="1534" height="27" rx="0" fill="#F7F7F6"/>
+<path d="M33 900H1567" stroke="#DADAD5"/>
+<circle cx="51" cy="914" r="3" fill="#206C3C"/>
+<text x="63" y="918" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="400">Local</text>
+<text x="119" y="918" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="400">Ollama</text>
+<text x="184" y="918" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="400">Modelo: exemplo</text>
+<text x="346" y="918" fill="#206C3C" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="400">Tarefa concluída</text>
+<text x="1182" y="918" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="400">UTF-8     CRLF     TypeScript</text>
+<text x="32" y="967" fill="#202020" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="600">COMPOSIÇÃO PROPOSTA</text>
+<text x="204" y="967" fill="#61615B" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="400">Navegação persistente · Conversa · Editor e diff · Terminal · Estado da execução</text>
+</svg>

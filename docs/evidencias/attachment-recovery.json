@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-27T23:48:39.891Z",
+  "success": true,
+  "realOllama": true,
+  "isolatedDatabase": true,
+  "rejectedAttachmentPreserved": true,
+  "nextTurnWithoutAttachment": true,
+  "correctedAttachmentAccepted": true,
+  "completedAttachmentRetainedInContext": true
+}

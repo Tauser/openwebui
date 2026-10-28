@@ -1,0 +1,30 @@
+{
+  "increment": "I02.2",
+  "acceptedOn": "2026-10-27",
+  "timezone": "America/Sao_Paulo",
+  "status": "aceito",
+  "build": "passed",
+  "serverTests": { "passed": 17, "failed": 0 },
+  "runtimeTests": { "passed": 4, "failed": 0 },
+  "browser": {
+    "passed": true,
+    "pageErrors": 0,
+    "viewports": [[1440, 900], [390, 844]],
+    "checks": ["drafts", "last-conversation", "pinned", "ordering", "reading-position", "edit-fork", "repeat-fork", "fork-error-preserves-text", "mobile-dialog"]
+  },
+  "realModel": "qwen3.5-9b-coder:latest",
+  "originalConversationPreserved": true,
+  "personalDataBackupBeforeMigration": true,
+  "appliedToLocalServer": true,
+  "acceptedRequirements": ["CHAT-02", "CHAT-03", "CHAT-13"],
+  "nativeRuntimeProbe": {
+    "status": "complete",
+    "elapsedMs": 13137,
+    "modelSteps": 3,
+    "toolCalls": ["read_file", "read_file", "write_file", "write_file", "run_test"],
+    "fixtureTestsPassed": 1,
+    "integratedWithChat": false,
+    "realCancellationResumeVerified": false
+  },
+  "fullPhasesAccepted": []
+}

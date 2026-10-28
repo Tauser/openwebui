@@ -1,0 +1,23 @@
+{
+  "increment": "I01",
+  "acceptedOn": "2026-10-27",
+  "timezone": "America/Sao_Paulo",
+  "status": "aceito",
+  "build": "passed",
+  "providerTests": { "passed": 8, "failed": 0 },
+  "serverTests": { "passed": 7, "failed": 0 },
+  "browser": { "passed": true, "pageErrors": 0, "viewports": [[1440, 900], [390, 844]] },
+  "realChat": {
+    "model": "qwen3.5-9b-coder:latest",
+    "think": false,
+    "context": 4096,
+    "streaming": true,
+    "persisted": true,
+    "cancelled": true,
+    "response": "OK",
+    "warmElapsedMs": 446,
+    "note": "Resposta curta; não é benchmark de tarefas longas."
+  },
+  "fullPhasesAccepted": [],
+  "pending": ["F0 prova do motor com ferramentas", "F1 restante", "F2 a F8"]
+}

@@ -1,0 +1,15 @@
+node_modules/
+.cache/
+dist/
+.data/
+data/
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+tools/diagnostics/ambiente.local.json
+artifacts/qa/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm

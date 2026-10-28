@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-27T19:07:09.899Z",
+  "success": true,
+  "isolatedDatabase": true,
+  "checks": [
+    "Criar, renomear e reordenar seções; persistência após reload",
+    "Mover conversa selecionada, favoritos, pesquisa, ordenação e arquivo nos grupos",
+    "Confirmação de remoção e preservação integral das mensagens",
+    "Falha de gravação mantém diálogo e nome digitado",
+    "Diálogo móvel dentro da tela, foco contido e Escape preserva navegação",
+    "Falha ao carregar seções mantém conversas acessíveis e permite tentar novamente"
+  ],
+  "browserErrors": []
+}

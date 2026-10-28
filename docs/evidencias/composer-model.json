@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-28T00:11:00.353Z",
+  "success": true,
+  "allMutationsInterceptedInBrowser": true,
+  "personalSettingsUnchanged": true,
+  "checks": [
+    {
+      "width": 1440,
+      "menuCheckAndBounds": true,
+      "keyboardAndFocus": true,
+      "toggleEscapeOutside": true,
+      "selectionSuccess": true,
+      "failurePreservesModel": true,
+      "longNamesFit": true,
+      "emptyState": true,
+      "interceptedWrites": 3,
+      "browserErrors": []
+    },
+    {
+      "width": 390,
+      "menuCheckAndBounds": true,
+      "keyboardAndFocus": true,
+      "toggleEscapeOutside": true,
+      "selectionSuccess": true,
+      "failurePreservesModel": true,
+      "longNamesFit": true,
+      "emptyState": true,
+      "interceptedWrites": 3,
+      "browserErrors": []
+    }
+  ]
+}

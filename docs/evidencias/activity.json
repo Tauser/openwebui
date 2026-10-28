@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-27T19:40:50.063Z",
+  "success": true,
+  "realOllama": true,
+  "model": "qwen3.5-9b-coder:latest",
+  "isolatedDatabase": true,
+  "timer": {
+    "first": "Processando há 0 s",
+    "advanced": "Processando há 1 s"
+  },
+  "cancellation": "persisted",
+  "cancelClickMs": 24,
+  "cancelTotalMs": 230,
+  "completed": true,
+  "activityKinds": [
+    "model",
+    "hardware",
+    "generation"
+  ],
+  "browserErrors": []
+}
